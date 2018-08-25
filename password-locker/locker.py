@@ -24,4 +24,21 @@ def all():
         handle.write("/n")
 
         handle.close()
-        print("Account you just made has been created successfully")
+        print("Account you just made has been created successfully /n Would you like to do more with password locker?(y/n)")
+        responce = input().lower()
+        if responce == 'y':
+            generate_account()
+
+        else:
+            print("be sure to come back if you'd like to save a password, Have a good day!")
+
+    elif answer =='y':
+        login()
+
+
+
+def generate_account():
+    print("Which account would you like to generate an account for?")
+    account_to_be_saved =input()
+    print("Enter 'auto'- for an auto-generated password or 'type'- to type in your own password")
+
