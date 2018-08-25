@@ -1,15 +1,22 @@
-import unittest
-from password_locker import User
+import unittest # Importing the unittest module
+from locker import User # Importing the User class
 
 def setUp(self):
-    '''
-    Set up method to run before each test class
-    '''
-    self.new_user = User("Dan","Password","mungaiwaituika@gmail.com") #create a new user object
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_User = User("David","Password","Mungaiwaituika@gmail.com") # create user object
+
 
 def test_init(self):
     '''
-
-    :param self:
-    :return:
+    test_init test case to test if the object is initialized properly
     '''
+
+    self.assertEqual(self.new_User.user_name,"Dan")
+    self.assertEqual(self.new_User.password,"Password")
+    self.assertEqual(self.new_User.email,"Mungaiwaituika@gmail.com")
+
+
+if __name__ == '__main__':
+    unittest.main()
