@@ -1,10 +1,13 @@
 # Password Locker
-#### It halps you generate passwords and save passwords to help yoour memory, friday 24th August 2018
+#### It helps you generate passwords and save passwords to help yoour memory, friday 24th August 2018
 #### By **Dan Alvin**
 ## Description
 The app allows one to login and store the info on the other accounts ie the passwords and access said passwords when required 
 ## Setup/Installation Requirements
-* none required
+* clone the repository and access the programm via these commands on your terminal
+>$ cd password-locker
+> python3.6 locker.py
+
 
 ## Known Bugs
 no known bugs 
