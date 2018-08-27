@@ -1,4 +1,4 @@
-# {Password Locker}
+# Password Locker
 #### It halps you generate passwords and save passwords to help yoour memory, friday 24th August 2018
 #### By **Dan Alvin**
 ## Description
@@ -15,7 +15,7 @@ send an email to mungaiwaituika@gmail.com
 ### License
 *
 
-Copyright (c) [2018] [Neville Kaundu Kilonzo]
+Copyright (c) [2018] [Dan Alvin Mungai]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
