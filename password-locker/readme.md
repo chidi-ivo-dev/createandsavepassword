@@ -1,5 +1,5 @@
 # Password Locker
-#### It helps you generate passwords and save passwords to help yoour memory, friday 24th August 2018
+#### It helps you generate passwords and save passwords to help your memory, friday 24th August 2018
 #### By **Dan Alvin**
 ## Description
 The app allows one to login and store the info on the other accounts ie the passwords and access said passwords when required 
@@ -17,7 +17,7 @@ no known bugs
 ## Technologies Used
 Python
 ## Support and contact details
-send an email to mungaiwaituika@gmail.com 
+send an email to [Dan Alvin](mungaiwaituika@gmail.com) 
 ### License
 *
 
