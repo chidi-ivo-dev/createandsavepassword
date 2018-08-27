@@ -6,6 +6,9 @@ The app allows one to login and store the info on the other accounts ie the pass
 ## Setup/Installation Requirements
 * clone the repository and access the programm via these commands on your terminal
 >$ cd password-locker
+
+* then you run it with the following command 
+
 > python3.6 locker.py
 
 
