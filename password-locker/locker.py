@@ -1,10 +1,12 @@
 import random
 import pyperclip
+
+
 def all():
-    print("Already have an account?(y/n)")
+    print("Hello, my name is Jarvis,  Im here to help you create and save passwords,  Do you already have an account?(y/n)")
     answer = input().lower()
     if answer == 'n':
-        print("Enter your Name:")
+        print("Please enter your Name:")
         username = input()
         print("\n")
         print("Enter A password")
@@ -14,8 +16,7 @@ def all():
         email = input()
         print("\n")
 
-
-        handle = open("details.txt","a")
+        handle = open("credentials.txt", "a")
 
         handle.write(username)
         handle.write(" ")
@@ -23,7 +24,6 @@ def all():
         handle.write(" ")
         handle.write(email)
         handle.write("\n")
-
 
         handle.close()
         print("Account created succesfully\n Would you like to do more with Password Locker!(y/n)")
@@ -38,7 +38,6 @@ def all():
         login()
 
 
-
 def generate_account():
     print("Which account would you like to save a password for?")
     account_to_be_saved = input()
@@ -46,33 +45,27 @@ def generate_account():
     choice = input()
     if choice == 'auto':
         reversed_account_name = account_to_be_saved[::-1]
-        r = str(random.randint(0,50))
+        r = str(random.randint(0, 50))
         password = reversed_account_name + r
         print(f"your new password is {password}")
-        handle = open("account_and_passwords.txt","a")
+        handle = open("account_and_passwords.txt", "a")
 
         handle.write(account_to_be_saved)
         handle.write(" ")
         handle.write(password)
         handle.write(" ")
 
-
-
         handle.close()
-        print(f"the password to your new {account_to_be_saved} account is {password} and has been saved and copied, you can paste it anywhere in your laptop, you could even try with your terminal(ctr + shift + v)")
+        print(f"the password to your new {account_to_be_saved} account is {password} and has been saved and copied, "
+              "you can paste it anywhere in your laptop, you could even try with your terminal(ctr + shift + v)")
         pyperclip.copy(password)
     else:
         print("type in your password")
         password = input()
         pyperclip.copy(password)
 
-        print(f"the password to your new {account_to_be_saved} account is {password} and has been saved and copied, you can paste it anywhere in your laptop, you could even try with your terminal (ctrl + shift + v)")
-
-
-
-
-
-
+        print(f"the password to your new {account_to_be_saved} account is {password} and has been saved and copied, "
+              "you can paste it anywhere in your laptop, you could even try with your terminal (ctrl + shift + v)")
 
 
 def login():
@@ -85,74 +78,72 @@ def login():
     print("Enter your email")
     email = input()
     for line in open("credentials.txt", "r").readlines():
-            myVar = line.split()
-            if username == myVar[0] and password == myVar[1]:
-                print("login successful")
-                print("Would you like to do more with passwor locker?(y/n)")
-                jibu = input()
-                if jibu == 'y':
-                    generate_account()
-                else:
-                    print("Be sure to come back to Password Locker if you need to save passwords for new accounts")
-
-
-                return True
+        Var = line.split()
+        if username == Var[0] and password == Var[1]:
+            print("login successful")
+            print("Would you like to do more with passwor locker?(y/n)")
+            jibu = input()
+            if jibu == 'y':
+                generate_account()
             else:
-                print("Forgot password ?(y/n)")
-                response = input().lower()
-                if response == 'y':
-                    print("Enter your username")
-                    username = input()
-                    for line in open("credentials.txt", "r").readlines():
-                        my_file = line.split()
+                print("Be sure to come back to Password Locker if you need to save passwords for new accounts")
 
-                        to_be_printed = my_file[1]
-                        username1 = my_file[0]
-                        if username == username1:
-                            print(f"your password is {to_be_printed}")
-                        else:
-                            print("that username doesn't exist")
-                            login()
-                            return False
-                else:
-                    print("try again then")
+            return True
+        else:
+            print("Forgot password ?(y/n)")
+            response = input().lower()
+            if response == 'y':
+                print("Enter your username")
+                username = input()
+                for line in open("credentials.txt", "r").readlines():
+                    my_file = line.split()
 
-                    login()
+                    to_be_printed = my_file[1]
+                    username1 = my_file[0]
+                    if username == username1:
+                        print("your password is {to_be_printed}")
+                    else:
+                        # print("that username doesn't exist")
+                        login()
+                        # return False
+            else:
+                print("try again then")
 
-                return False
+                login()
+
+            # return False
 
 
 class User:
-
     """
     Class that generates new instances of Users
     """
     User_list = []
 
-    def __init__(self,username,password,email):
-
-        """
-        init method that defines properties for our objects
-        """
+    def __init__(self, username, password, email):
+        # """
+        # init method that defines properties for our objects
+        # """
 
         self.username = username
         self.password = password
         self.email = email
 
 
-
 class credentials:
-
     """
     Class that generates new instances of Users
     """
     User_list = []
 
-    def __init__(self,account,password,):
-
-       """
-       init method that defines properties for our objects
-       """
+    def __init__(self, account, password, ):
+        # """
+        # init method that defines properties for our objects
+        # """
 
         self.account = account
         self.password = password
+
+   
+
+    all()
