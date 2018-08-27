@@ -1,4 +1,5 @@
 import unittest # Importing the unittest module
+import pyperclip
 from locker import User # Importing the User class
 
 def setUp(self):
