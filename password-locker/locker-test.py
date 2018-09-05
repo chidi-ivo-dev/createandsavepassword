@@ -6,7 +6,7 @@ def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_User = User("David","Password","Mungaiwaituika@gmail.com") # create user object
+        self.new_User = User("Dan","Password","Mungaiwaituika@gmail.com") # create user object
 
 
 def test_init(self):
